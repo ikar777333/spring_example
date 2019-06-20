@@ -58,8 +58,12 @@
 				<artifactId>frontend-maven-plugin</artifactId>
 				<version>1.7.6</version>
 
-				<executions>
+				<configuration>
+<!--					<installDirectory>target</installDirectory>-->
+					<workingDirectory>src/main/resources/static</workingDirectory>
+				</configuration>
 
+				<executions>
 					<execution>
 						<id>install node and npm</id>
 						<goals>
@@ -84,9 +88,9 @@
 					<execution>
 						<id>webpack-build</id>
 						<goals><goal>webpack</goal></goals>
-<!--						<configuration>-->
-<!--							<arguments>&#45;&#45;mode production</arguments>-->
-<!--						</configuration>-->
+						<configuration>
+							<arguments>--mode production</arguments>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
