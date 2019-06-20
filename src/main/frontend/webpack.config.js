@@ -3,7 +3,7 @@ let path = require('path');
 let conf = {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, './dist'),
+		path: path.resolve(__dirname, '../resources/static/dist'),
 		filename: 'main.js',
 		publicPath: 'dist/'
 	},
