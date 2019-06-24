@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LoginForm from "./login/LoginForm"
+import LoginForm from "./components/login/LoginForm"
 
 class App extends Component {
   render() {
