@@ -1,10 +1,10 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
-import Container from "@material-ui/core/Container";
-import Paper from "@material-ui/core/Paper";
+import CssBaseline from "@material-ui/core/CssBaseline/index";
+import Button from "@material-ui/core/Button/index";
+import Typography from "@material-ui/core/Typography/index";
+import TextField from "@material-ui/core/TextField/index";
+import Container from "@material-ui/core/Container/index";
+import Paper from "@material-ui/core/Paper/index";
 
 const style = {
   Paper: { padding: 20, marginTop: 10, marginBottom: 10 }
@@ -20,16 +20,16 @@ class LoginForm extends React.Component {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form name="f" action="login" method="POST">
+          <form name="f" action="/perform_login" method="POST">
             <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
             />
             <TextField
