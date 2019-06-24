@@ -39,12 +39,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
 		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
+			<groupId>de.u-mass</groupId>
+			<artifactId>lastfm-java</artifactId>
+			<version>0.1.2</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -59,8 +58,7 @@
 				<version>1.7.6</version>
 
 				<configuration>
-					<installDirectory>src/main/frontend</installDirectory>
-					<workingDirectory>src/main/frontend</workingDirectory>
+					<workingDirectory>src/main/webapp/WEB-INF/view/react</workingDirectory>
 				</configuration>
 
 				<executions>
@@ -86,10 +84,12 @@
 					</execution>
 
 					<execution>
-						<id>webpack-build</id>
-						<goals><goal>webpack</goal></goals>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
 						<configuration>
-							<arguments>--mode production</arguments>
+							<arguments>run build</arguments>
 						</configuration>
 					</execution>
 				</executions>
